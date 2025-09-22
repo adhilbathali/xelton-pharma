@@ -2,6 +2,7 @@
 import Link from "next/link";
 import styles from './Navbar.module.css'
 import { useState } from "react";
+import Image from "next/image";
 
 const Navbar = () => {
 
@@ -28,11 +29,17 @@ const Navbar = () => {
     return (
         <nav className={`nav flex h-25 justify-between min-sm:px-10 bg-transparent z-1000 ${(isScrolled || isMobileMenoOpen) && styles.navbarScrolled} fixed top-0 left-0 w-full`}>
             <div className={`flex max-md:w-full h-full min-sm:bg-transparent max-sm:px-10 ${isScrolled ? 'bg-white' : 'bg-transparent'} transition-all justify-between z-300`}>
-                <Link href='/'>
-                    <div className="flex h-full z-300">
-                        <img src={(isScrolled || isMobileMenoOpen) ? '/xelton.png' : '/xelton_white.png'} alt="xelton" className="object-cover z-200" />
-                    </div>
-                </Link>
+            <Link href="/">
+  <div className="flex h-full z-30 relative w-auto">
+    <Image
+      src={isScrolled || isMobileMenoOpen ? "/xelton.png" : "/xelton_white.png"}
+      alt="xelton"
+      width={100} // set appropriate width
+      height={50} // set appropriate height
+      className="object-cover"
+    />
+  </div>
+</Link>
 
                 {/* Hamburger Menu Button (Mobile Only) */}
                 <button onClick={toggleMobileMenu} className='hamburgerOpen min-md:hidden cursor-pointer p-[10px] h-fit w-fit self-center z-200' aria-label="Toggle menu">

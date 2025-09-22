@@ -2,6 +2,7 @@ import styles from "./Footer.module.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faYoutube, faInstagram, faFacebook, faWhatsapp } from "@fortawesome/free-brands-svg-icons"
 import { faArrowRightArrowLeft, faArrowRightFromBracket, faArrowRightFromFile, faArrowRightRotate, faArrowRightToBracket, faEnvelope, faLocation, faLocationDot, faPhone } from "@fortawesome/free-solid-svg-icons"
+import Image from "next/image"
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons/faArrowRight"
 
 export default function Footer(){
@@ -10,8 +11,13 @@ export default function Footer(){
             <div className="flex flex-col lg:flex-row gap-10 justify-around items-start">
                 <div className="max-w-[500px] mt-5 lg:mt-0 flex flex-col justify-around items-start">
                     <div className="flex justify-around items-center">
-                        <img src="/xelton_white.png" alt="xelton" className="h-[100px] lg:h-[150px]" />
-                        <p>Xelton Pharma delivers safe, high-quality pharmaceutical products across India, focused on innovation and reliability.</p>
+                    <Image
+      src="/xelton_white.png"
+      alt="xelton"
+      width={100} // set appropriate width
+      height={50} // set appropriate height
+      className="object-cover"
+    />                        <p>Xelton Pharma delivers safe, high-quality pharmaceutical products across India, focused on innovation and reliability.</p>
                     </div>
                 </div>
                 <div>
