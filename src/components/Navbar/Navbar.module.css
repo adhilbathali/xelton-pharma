@@ -1,0 +1,48 @@
+.nav ul{
+    list-style: none;
+}
+
+.nav {
+    transition: background-color 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+    color: white;
+}
+
+.navbarScrolled {
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    color: #646464;
+  }
+
+.hamburger {
+    display: none; /* Hidden on desktop */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1001; /* Above navbar content, below mobile menu itself if needed */
+  }
+
+  .hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: #ffffff; /* White bars when transparent */
+    margin: 5px 0;
+    transition: all 0.3s ease; /* Animation for bars */
+  }
+
+  /* Adjust bar color when navbar has background */
+  .navbarScrolled .hamburger div {
+     background-color: #333;
+  }
+
+
+  /* Hamburger Animation (Open State) */
+  .hamburgerOpen .bar1 {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburgerOpen .bar2 {
+    opacity: 0;
+  }
+  .hamburgerOpen .bar3 {
+    transform: translateY(-8px) rotate(-45deg);
+  }
