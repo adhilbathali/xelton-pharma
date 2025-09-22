@@ -61,7 +61,7 @@ const Navbar = () => {
             <ul className="max-md:hidden min-md:flex justify-center items-center gap-20 min-md:w-full min-lg:w-3/4 h-full">
                 {navLinks.map((link) => (
                     <li key={link.name} className="font-semibold">
-                        <Link href={link.path} className={!isScrolled && 'text-white'}>{link.name}</Link>
+                        <Link href={link.path} className={!isScrolled ? 'text-white':''}>{link.name}</Link>
                     </li>
                 ))}
             </ul>

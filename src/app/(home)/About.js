@@ -6,7 +6,7 @@ export default function About(props) {
 
   return (
     <div
-      className={`${className} relative flex flex-col items-center justify-center min-h-screen p-10 bg-gradient-to-br from-blue-50 to-white overflow-hidden`}
+      className={`${className} relative flex flex-col items-center justify-center min-h-screen max-md:p-5 min-md:p-10 bg-gradient-to-br from-blue-50 to-white overflow-hidden`}
     >
       {/* Top floating PNG */}
       {/* <Image
@@ -31,7 +31,7 @@ export default function About(props) {
       <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-blue-300/20 rounded-full blur-3xl translate-x-1/3 translate-y-1/3 hidden lg:block"></div>
 
       {/* Content */}
-      <div className="z-10 bg-white/40 flex flex-col justify-center items-center p-10 rounded-2xl">
+      <div className="z-10 bg-white/40 flex flex-col justify-center items-center max-md:p-5 min-md:p-10 rounded-2xl">
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-400 text-center mb-6">
           Pioneering Better Health
         </h1>
