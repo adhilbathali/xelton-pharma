@@ -1,3 +1,4 @@
+import Link from "next/link";
 export default function About(props) {
     const { className } = props;
     return (
@@ -32,9 +33,9 @@ export default function About(props) {
               As an emerging global leader, Xelton focuses on excellence, compliance, and patient-centric solutions, striving to improve health outcomes and create a positive impact on communities everywhere.
             </p>
 
-        <button className="py-3 px-6 bg-blue-600 text-white font-semibold rounded-full shadow-lg hover:bg-white hover:text-blue-600 hover:border hover:border-blue-600 transition-all duration-500 z-10">
+        <Link href='/about-us' className="py-3 px-6 bg-blue-600 text-white font-semibold rounded-full shadow-lg hover:bg-white hover:text-blue-600 hover:border hover:border-blue-600 transition-all duration-500 z-10">
           Know More
-        </button>
+        </Link>
         </div>
       </div>
     );
