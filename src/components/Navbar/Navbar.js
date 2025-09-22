@@ -1,7 +1,7 @@
 'use client'
 import Link from "next/link";
 import styles from './Navbar.module.css'
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 
 const Navbar = () => {
@@ -9,11 +9,19 @@ const Navbar = () => {
     const [isScrolled, setIsScrolled] = useState(false)
     const [isMobileMenoOpen, setIsMobileMenuOpen] = useState(false)
 
+     // Handle scroll safely on client
+  useEffect(() => {
     const handleScroll = () => {
-        setIsScrolled(window.scrollY > 10);
-    }
+      setIsScrolled(window.scrollY > 10);
+    };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+
+    // Cleanup listener on unmount
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
     const toggleMobileMenu = () => {
         setIsMobileMenuOpen(!isMobileMenoOpen)
