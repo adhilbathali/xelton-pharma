@@ -72,7 +72,7 @@ const Navbar = () => {
                 <ul className="flex flex-col gap-2 text-center">
                     {navLinks.map((link) => (
                         <li key={link.path} className="font-semibold border-b border-slate-200 p-3 w-screen rounded-2xl">
-                            <Link href={link.path}>{link.name}</Link>
+                            <Link onClick={toggleMobileMenu} href={link.path}>{link.name}</Link>
                         </li>
                     ))}
                 </ul>
