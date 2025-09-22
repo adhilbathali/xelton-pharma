@@ -1,3 +1,4 @@
+import Image from "next/image";
 import products from "./contents.js"; // adjust path
 
 export default function ProductSection() {
@@ -17,27 +18,27 @@ export default function ProductSection() {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 min-md:px-20">
         {products.map((product) => (
           <div
-          key={product.id}
-          className="rounded-2xl overflow-hidden flex flex-col bg-white shadow-[4px_4px_10px_rgba(0,0,0,0.15)]"
-        >
-          {/* Product Image */}
-          <div className="w-full h-64 relative">
-            <img
-              src={product.image}
-              alt={product.title}
-              className="w-full h-full object-cover"
-            />
-          </div>
+            key={product.id}
+            className="rounded-2xl overflow-hidden flex flex-col bg-white shadow-[4px_4px_10px_rgba(0,0,0,0.15)]"
+          >
+            {/* Product Image */}
+            <div className="w-full h-64 relative">
+              <Image
+                src={product.image}
+                alt={product.title}
+                fill
+                className="object-cover"
+              />
+            </div>
 
-          {/* Glassmorphism Content */}
-          <div className="p-6 flex flex-col items-center text-center bg-white/30 backdrop-blur-lg rounded-b-2xl">
-            <h3 className="text-xl font-semibold text-blue-900 mb-2">
-              {product.title}
-            </h3>
-            <p className="text-gray-700 text-sm">{product.description}</p>
+            {/* Glassmorphism Content */}
+            <div className="p-6 flex flex-col items-center text-center bg-white/30 backdrop-blur-lg rounded-b-2xl">
+              <h3 className="text-xl font-semibold text-blue-900 mb-2">
+                {product.title}
+              </h3>
+              <p className="text-gray-700 text-sm">{product.description}</p>
+            </div>
           </div>
-        </div>
-
         ))}
       </div>
     </section>
