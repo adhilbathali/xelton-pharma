@@ -37,7 +37,7 @@ const Navbar = () => {
     return (
         <nav className={`nav flex h-25 justify-between min-sm:px-10 bg-transparent z-1000 ${(isScrolled || isMobileMenoOpen) && styles.navbarScrolled} fixed top-0 left-0 w-full`}>
             <div className={`flex max-md:w-full h-full min-sm:bg-transparent max-sm:px-10 ${isScrolled ? 'bg-white' : 'bg-transparent'} transition-all justify-between z-300`}>
-            <Link href="/">
+            <Link href="/" onClick={toggleMobileMenu}>
   <div className="flex h-full z-30 relative w-auto">
     <Image
       src={isScrolled || isMobileMenoOpen ? "/xelton.png" : "/xelton_white.png"}
