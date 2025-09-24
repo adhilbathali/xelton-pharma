@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 const HeroSection = () => {
   return (
-    <section className="relative w-full bg-gradient-to-br from-blue-400 to-blue-900 min-h-[500px] flex items-center justify-center overflow-hidden">
+    <section className="relative w-full bg-gradient-to-br from-blue-400 to-blue-900 min-h-[500px] flex items-center justify-center overflow-hidden max-md:pt-10">
       {/* Background wave/shape - You might replace this with an actual SVG or more complex design */}
       <div className="absolute bottom-0 left-0 w-full h-1/2 bg-white transform -skew-y-3 origin-bottom-left md:h-2/3 lg:h-3/4"></div>
 
@@ -26,7 +26,7 @@ const HeroSection = () => {
         </div>
 
         {/* Right Section: Text Content */}
-        <div className="w-full md:w-1/2 text-center md:text-left p-6">
+        <div className="w-full md:w-1/2 text-center md:text-left max-md:-mt-10 min-md:p-6">
           <h1 className="text-4xl lg:text-5xl font-bold text-blue-900 mb-4 uppercase tracking-widest">
             Xelton Pharma
           </h1>
