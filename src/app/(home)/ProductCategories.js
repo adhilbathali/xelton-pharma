@@ -22,7 +22,7 @@ export default function ProductCategories() {
               className="w-full h-72 object-cover rounded-2xl group-hover:scale-105 transition-transform duration-500"
             />
             {/* Overlay */}
-            <div className="absolute bottom-0 left-0 w-full h-36 bg-black/40 backdrop-blur-sm text-white p-5 flex flex-col justify-end rounded-b-2xl">
+            <div className="absolute bottom-0 left-0 w-full h-26 bg-black/40 backdrop-blur-sm text-white p-5 flex flex-col justify-end rounded-b-2xl">
               <h1 className="text-xl sm:text-2xl font-bold">{category.title}</h1>
               <p className="text-sm sm:text-base line-clamp-2">{category.description}</p>
             </div>
