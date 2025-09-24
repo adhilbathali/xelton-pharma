@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faYoutube, faInstagram, faFacebook, faWhatsapp } from "@fortawesome/free-brands-svg-icons"
 import { faArrowRightArrowLeft, faArrowRightFromBracket, faArrowRightFromFile, faArrowRightRotate, faArrowRightToBracket, faEnvelope, faLocation, faLocationDot, faPhone } from "@fortawesome/free-solid-svg-icons"
 import Image from "next/image"
+import Link from "next/link"
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons/faArrowRight"
 
 export default function Footer(){
@@ -23,10 +24,10 @@ export default function Footer(){
                 <div>
                     <h1 className="text-[20px] font-bold mb-[10px]">Quick Links</h1>
                     <ul className="py-[5px] px-[8px]">
-                        <li className="mb-[12px]">About Us</li>
-                        <li className="mb-[12px]">Our Products</li>
-                        <li className="mb-[12px]">Careers</li>
-                        <li className="mb-[12px]">Contact</li>
+                        <li className="mb-[12px]"><Link href='/about-us'>About Us</Link></li>
+                        <li className="mb-[12px]"><Link href='/our-products'>Our Products</Link></li>
+                        <li className="mb-[12px]"><Link href='/careers'>Careers</Link></li>
+                        <li className="mb-[12px]"><Link href='/contact-us'>Contact Us</Link></li>
                     </ul>
                 </div>
                 <div>
