@@ -23,7 +23,7 @@ export default function About(props) {
         alt="Doctor"
         width={800} // adjust width
         height={600} // adjust height
-        className="hidden lg:block absolute bottom-0 right-0"
+        className="lg:block absolute bottom-0 right-0"
       />
 
       {/* Optional abstract background shapes */}
@@ -31,7 +31,7 @@ export default function About(props) {
       <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-blue-300/20 rounded-full blur-3xl translate-x-1/3 translate-y-1/3 hidden lg:block"></div>
 
       {/* Content */}
-      <div className="z-10 bg-white/40 flex flex-col justify-center items-center max-md:p-5 min-md:p-10 rounded-2xl">
+      <div className="z-10 bg-white/40 max-md:bg-white/50 flex flex-col justify-center items-center max-md:p-5 min-md:p-10 rounded-2xl">
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-400 text-center mb-6">
           Pioneering Better Health
         </h1>
