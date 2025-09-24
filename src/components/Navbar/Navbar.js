@@ -68,15 +68,26 @@ const Navbar = () => {
 
 
             {/* Mobile Navigations */}
-            <div className={`flex flex-col z-[1100] justify-around items-center pt-25 h-fit shadow-xl bg-white fixed bottom-full rounded-b-2xl left-0 w-full transition-all duration-600 ${isMobileMenoOpen && 'translate-y-full'}`}>
-                <ul className="flex flex-col gap-2 text-center">
-                    {navLinks.map((link) => (
-                        <li key={link.path} className="font-semibold border-b border-slate-200 p-3 w-screen rounded-2xl">
-                            <Link onClick={toggleMobileMenu} href={link.path}>{link.name}</Link>
-                        </li>
-                    ))}
-                </ul>
-            </div>
+            {/* Mobile Navigations */}
+<div
+  className={`absolute top-full left-0 w-full bg-white shadow-xl rounded-b-2xl transition-all duration-500 overflow-hidden ${
+    isMobileMenoOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+  }`}
+>
+  <ul className="flex flex-col gap-2 text-center">
+    {navLinks.map((link) => (
+      <li
+        key={link.path}
+        className="font-semibold border-b border-slate-200 p-3 w-full"
+      >
+        <Link onClick={toggleMobileMenu} href={link.path}>
+          {link.name}
+        </Link>
+      </li>
+    ))}
+  </ul>
+</div>
+
 
 
         </nav>
