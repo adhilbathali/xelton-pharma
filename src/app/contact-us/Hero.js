@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function ContactHero() {
   return (
-    <section className="relative w-full h-screen flex flex-col justify-center px-10 pt-25">
+    <section className="relative w-full h-screen flex flex-col justify-center px-10 pt-25 max-md:pb-25">
       {/* Background Image */}
       <Image
         src="/images/contact/header.jpg" // your image path in /public folder
@@ -17,7 +17,7 @@ export default function ContactHero() {
       <div className="absolute inset-0 bg-black/50 z-10"></div>
 
       {/* Content */}
-      <div className="relative z-20 max-w-4xl mx-auto px-4 text-center text-white max-md:pt-20">
+      <div className="relative z-20 max-w-4xl mx-auto px-4 text-center text-white max-md:mt-35">
         <h1 className="text-4xl sm:text-5xl font-bold mb-4">Get in Touch</h1>
         <p className="text-lg sm:text-xl mb-12">
           Have a question about our products or services, or want to discuss a potential collaboration? Reach out and our team will respond promptly.
